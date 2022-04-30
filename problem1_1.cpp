@@ -5,7 +5,7 @@
 using namespace std;
 using namespace cv;
 
-void show(Mat img, string name)
+void show(Mat img, string name)//创建窗口
 {
     namedWindow(name, 0);
     imshow(name, img);
@@ -64,7 +64,7 @@ void fixarmor(Mat &raw,Mat img)
         RotatedRect temp = minAreaRect(x);
         rect.push_back(temp);
     }
-    for (auto x : rect)   //筛选灯条
+    for (auto x : rect)   //利用角度，面积，长宽比筛选灯条
     {
         for (auto y : rect)
         {
