@@ -1,0 +1,21 @@
+#!/bin/sh
+echo"猜数字游戏"
+echo"数字范围为1到60"
+a=$((RANDOM%60))
+count=0
+echo $a
+while:
+do
+         read -p "请输入数字:" num
+         let count++
+         echo $num
+         if [$a -gt $num ];then
+               echo "猜小了"
+         elif [ $a -lt $num ];then
+                echo"猜大了"
+          else
+                    echo"猜对了"
+                    echo"一共猜了$count次"
+                    exit
+           fi
+done
