@@ -1,0 +1,10 @@
+#!/bin/sh
+echo "please input two int num:"
+read -p "first num:" first
+read -p "second num:" second
+expr $first + 1 &> /dev/null	           #判断first是否为数字
+[ $? == 0 ] && echo "number" || echo " other char"
+expr $second + 1 &> /dev/null           #判断second是否为数字
+[ $? == 0 ] && echo "number" || echo " other char"	
+minus=$(($first-$second))
+echo"$first - $second=$minus"
