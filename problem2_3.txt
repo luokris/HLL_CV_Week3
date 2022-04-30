@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "I am bwwg teacher welcome to bwwg trainingclass" > test.txt
+for i in `cat test.txt`
+do
+        if [ ${#i} -lt 6 ];then
+                echo $i
+        fi
+done
+
